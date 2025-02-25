@@ -1,0 +1,16 @@
+1a.
+    - Read Input Numbers (Forgot this part when creating the first model)
+    - Create 3 spans of numbers 1-4
+    - Add a number for every cell
+    - Constrain the Repeated numbers for every cell
+
+1b.
+    - Subgrids for a 4v4 = 4 subgrids; 4 rules?
+    - Span of 4; divide the rows x collums / 2's 
+        - Subgrids (1..4) => {LT, RT, LB, RB}
+        - Use contraints to manage the subgrid
+            - (X,Y)
+                - (1-2, 1-2) => LT
+                - (1-2, 3-4) => RT
+                - (3-4, 1-2) => LB
+                - (3-4, 3-4) => RB
