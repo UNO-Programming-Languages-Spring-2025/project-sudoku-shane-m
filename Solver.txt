@@ -14,3 +14,20 @@
                 - (1-2, 3-4) => RT
                 - (3-4, 1-2) => LB
                 - (3-4, 3-4) => RB
+
+1c.
+    - Subgrid should have unique set of rules so that the number is unique to each subgrid
+    - We already have a sequence that checks rows and collums
+        - Plan
+            - Check the value(N) by each Subgrid(G)
+                - G => spans {1..4}
+            - count the rows x collums in the subgrid(G)
+        - NOTE: Rule didnt work -> Check for unique pairing within subgrid(G)
+            - Try a new contraint that prevents a value being created
+                - value(N), #count {X,Y: subgrid(X,Y,1), sudoku(X,Y,N) } != 1
+                    - Check value at subgrid(1) => count (1..2,1..2) and value (N) to make it unique 
+                - NOTE: Made a syntax error; need for Constraint ':-' 
+
+2.
+    Just rewrite the code to include {1..9}, instead of {1..4}
+    NOTE: FIRST TRY!!!! :) 
